@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --black: #100F0F;
+            --teal: #0F3D3E;
+            --beige: #E2DCC8;
+            --night: #F1F1F1;
+            --white: #FFFFFF;
+            --gray: #C7C7C7;
+            --sm: 16px; /*tamaños de letras*/
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .login {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .logo {
+            width: 300px;
+            margin-bottom: 48px; /*margen inferior*/
+            justify-self: center;
+            display: none;
+        }
+        .title {
+            font-size: var(--lg); /*usando la variable de tamaño grande*/
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .subtitle {
+            color: var(--gray); /*usando variable de color*/
+            font-size: var(--md);
+            font-weight: 300; /*grosor de la letra basado en los liks*/
+            margin-top: 0;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+
+        }
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .input {
+            background-color: var(--night);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .primary-button {
+            background-color: var(--teal);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer; /*el puntero del mouse cambia a manita*/
+            font-size: var(--md);
+            font-weight: bold;
+            height: 48px;
+        }
+        .login-button {
+            margin-top: 14px; /*margen superior*/
+            margin-bottom: 32px;
+        }
+        @media (max-width: 640px) {
+            .logo {
+                display: block;
+            }            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="./logos/Logo.svg" alt="logo" class="logo">
+
+            <h1 class="title">Create a new password</h1>
+            <p class="subtitle">Enter a new password for you account</p>
+
+            <form action="/" class="form">
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" placeholder="*********" class="input input-password">
+
+                <label for="new-password" class="label">Password</label>
+                <input type="password" id="new-password" placeholder="*********" class="input input-password">
+
+                <input type="submit" value="Confirm" class="primary-button login-button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
