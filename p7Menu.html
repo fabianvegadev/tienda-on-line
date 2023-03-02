@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --black: #100F0F;
+            --teal: #0F3D3E;
+            --beige: #E2DCC8;
+            --night: #F1F1F1;
+            --white: #FFFFFF;
+            --gray: #B2B2B2;
+            --sm: 16px; /*tamaños de letras*/
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin-left: 0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .desktop-menu {
+            width: 100px;
+            height: auto;
+            border: 1px solid var(--gray);
+            border-radius: 6px;
+            padding: 20px 20px 0 20px; /*(arriba derecha abajo izquierda) se deja padding inferior en cero debido a que ya tiene un pading dedicado y asi no se sumarian*/
+        }
+        .desktop-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .desktop-menu ul li {
+            text-align: end;
+        }
+        .desktop-menu ul li:nth-child(1),
+        .desktop-menu ul li:nth-child(2) {
+            font-weight: bold; /*grosor de la fuente en los dos primeros "li"*/
+        }
+        .desktop-menu ul li:last-child{
+            padding-top: 20px;
+            border-top: 1px solid var(--gray);
+        }
+        .desktop-menu ul li:last-child a {
+            color: var(--teal);
+            font-size: var(--sm);
+        }
+        .desktop-menu ul li a {
+            color: var(--black);
+            text-decoration: none; /*quitar linea debajo de las letras*/
+            display: inline-block; /*Esto hace que los "a" tengan sentido de "inline-block", por defecto vienen solo con "inline"*/
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-menu">
+        <ul>
+            <li>
+                <a href="/" class="title">My orders</a>
+            </li>
+
+            <li>
+                <a href="/">My account</a>
+            </li>
+
+            <li>
+                <a href="/">Sign out</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
