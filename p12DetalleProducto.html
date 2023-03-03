@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --black: #100F0F;
+            --teal: #0F3D3E;
+            --beige: #E2DCC8;
+            --night: #F1F1F1;
+            --white: #FFFFFF;
+            --gray: #B2B2B2;
+            --sm: 14px; /*tamaños de letras*/
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .product-detail {
+            width: 360px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+        }
+        .product-detail-close {
+            display: flex;
+            background: var(--white);  
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 22px;
+            left: 22px;
+            z-index: 2;
+            padding: 8px;
+            border: 1px solid var(--beige);
+            border-radius: 50%;
+        }
+        .product-detail:hover {
+            cursor: pointer;
+        }   
+        .product-detail img:nth-child(2) {
+            width: 360px;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 0 0 20px 20px; /*arriba izq . arriba der . abajo der . abajo izq*/
+            border: 2px solid var(--beige);
+            box-sizing: border-box;
+        }   
+        .product-info {
+            margin: 24px 24px 0 24px; /*arriba abajo . lados*/
+        }  
+        .product-info p:nth-child(1) {
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info p:nth-child(2) {
+            color: var(--gray);
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        .product-info p:nth-child(3) {
+            color: var(--gray);
+            font-size: var(--sd);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        .primary-button {
+            background-color: var(--teal);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer; /*el puntero del mouse cambia a manita*/
+            font-size: var(--md);
+            font-weight: bold;
+            height: 48px;
+        }
+        .add-to-cart-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }    
+        @media (max-width: 640px) {
+            .product-detail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+        <div class="product-detail-close">
+            <img src="./icons/cerrar.png" alt="close">
+        </div>
+        
+        <img src="./products/jabonFacialCarbonActivo.png" alt="">
+        <div class="product-info">
+            <p>$35.000</p>
+            <p>Jabon</p>
+            <p>Tradicionalmente, es un material sólido. En realidad la forma sólida es el compuesto «seco», sin el agua que se emplea en la reacción mediante la cual se obtiene el jabón. La forma líquida es el jabón «disuelto» en agua. En este caso, su consistencia puede presentar distintas viscosidades.</p>
+            <button class="primary-button add-to-cart-button">
+                Add to Cart
+                <img src="./icons/carrito+.svg" alt="">              
+            </button>
+        </div>
+    </aside>
+</body>
+</html>
