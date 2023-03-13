@@ -1,0 +1,319 @@
+/* GENERALES */
+:root {
+    --black: #100F0F;
+    --teal: #0F3D3E;
+    --beige: #E2DCC8;
+    --night: #F1F1F1;
+    --white: #FFFFFF;
+    --gray: #B2B2B2;
+    --sm: 14px; /*tamaños de letras*/
+    --md: 16px;
+    --lg: 18px;
+}
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.inactive {
+    display: none;
+}
+
+/* NAVBAR */
+nav {
+    background-color: var(--night);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 12px;
+    border-bottom: 1px solid var(--gray);
+}
+.icon-menu {
+    display: none;
+    cursor: pointer;
+}
+.logo {
+    width: 200px;
+}
+.navbar-left {
+    display: flex;
+}
+.navbar-left ul {
+    display: flex;
+    margin-left: 12;
+}
+.navbar-left ul,
+.navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.navbar-left ul li a,
+.navbar-right ul li a {
+    text-decoration: none;
+    color: var(--black);            
+    padding: 16px;
+}
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+    background-color: var(--beige);
+    border-radius: 8px;
+}
+.navbar-email {
+    cursor: pointer;
+    color: var(--gray);
+    font-size: var(--sm);
+    margin-right: 12px;
+}
+.navbar-shopping-cart {
+    position: relative;
+    cursor: pointer;
+}
+.navbar-shopping-cart div {
+    display: flex;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: var(--beige);
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    right: 4px;
+}
+
+/* MENU DESKTOP */
+.desktop-menu {
+    position: absolute;
+    top: 60px;
+    background-color: var(--night);
+    z-index: 1;
+    right: 80px;
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--gray);
+    border-radius: 0 0 6px 6px;
+    padding: 20px 20px 0 20px; /*(arriba derecha abajo izquierda) se deja padding inferior en cero debido a que ya tiene un pading dedicado y asi no se sumarian*/
+}
+.desktop-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.desktop-menu ul li {
+    text-align: end;
+}
+.desktop-menu ul li:nth-child(1),
+.desktop-menu ul li:nth-child(2) {
+    font-weight: bold; /*grosor de la fuente en los dos primeros "li"*/
+}
+.desktop-menu ul li:last-child{
+    padding-top: 20px;
+    border-top: 1px solid var(--gray);
+}
+.desktop-menu ul li:last-child a {
+    color: var(--teal);
+    font-size: var(--sm);
+}
+.desktop-menu ul li a {
+    color: var(--black);
+    text-decoration: none; /*quitar linea debajo de las letras*/
+    display: inline-block; /*Esto hace que los "a" tengan sentido de "inline-block", por defecto vienen solo con "inline"*/
+    margin-bottom: 20px;
+}
+
+/* MENU MOBILE */
+.mobile-menu {
+    position: absolute;
+    top: 60px;
+    background-color: var(--night);
+    z-index: 1;
+    padding:  24px;
+    border-right: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    border-radius: 8px;
+}
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+.mobile-menu ul {
+    padding: 0; /*Las listas vienen con padding y margenes por defecto*/
+    margin: 24px 0 0; /*(arriba . los lados . abajo)*/
+    list-style: none;
+}
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--gray);            
+}
+.mobile-menu ul:nth-child(2) {
+    margin-bottom: 24px;
+}
+.mobile-menu ul li {
+    margin-bottom: 24px;
+}        
+.email {
+    font-size: var(--sm);
+    font-weight: 300 !important; /*todos los "a" tienen font-weight bold, por lo tanto es necesario usar el !important por temas de especificidad*/
+}
+.sign-out {
+    font-size: var(--sm);
+    color: var(--teal) !important;
+}
+
+/* SHOPPING CAR */
+.product-detail {
+    background-color: var(--white);
+    width: 360px;
+    padding: 0 24px 24px 24px;
+    position: absolute;
+    top: 60px;
+    right: 0;   
+    box-sizing: border-box;
+    border: 1px solid var(--gray);
+    border-radius: 0 0 8px 8px;    
+}
+.title-container {
+    display: flex;            
+}
+.title-container img {
+    transform: rotate(180deg);
+    margin-right: 16px;
+}
+.title {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+.order {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--beige);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    padding: 0 24px; /*(arriba y abajo . los costados)*/
+}
+.order p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+.order p span:nth-child(1) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+.order p:nth-child(2) {
+    text-align: end;
+    font-weight: bold;
+}        
+.shopping-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.shopping-card figure {
+    margin: 0;
+}
+.shopping-card figure img {
+    width: 70px;
+    width: 70px;
+    border-radius: 20px;
+    border: 1px solid var(--beige);
+    object-fit: cover;
+}
+.shopping-card p:nth-child(2) {
+    color: var(--gray);
+}
+.shopping-card p:nth-child(3) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+.primary-button {
+    background-color: var(--teal);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer; /*el puntero del mouse cambia a manita*/
+    font-size: var(--md);
+    font-weight: bold;
+    height: 48px;
+}  
+
+/* PRODUCT LIST */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 28px;
+    place-content: center;
+    margin-top: 24px;
+}
+.product-card {
+    width: 240px;
+}
+.product-card img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid var(--beige);
+}
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+.product-info figure {
+    margin: 0;
+}
+.product-info figure img {
+    width: 40px;
+    height: 40px;
+    border: none;
+    object-fit: contain;
+}
+.product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+.product-info div p:nth-child(2) {
+    font-size: var(--sm);            
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--gray);
+}
+@media (max-width: 640px) {
+    .icon-menu {
+        display: block;
+    }
+    .navbar-left ul,
+    .navbar-email,
+    .desktop-menu {
+        display: none;
+    }
+    .product-detail {
+        width: 100%;
+    }
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, 140px);
+    }
+    .product-card {
+        width: 140px;
+    }
+    .product-card img {
+        width: 140px;
+        height: 140px;
+    }
+}
+@media (min-width: 641px) {
+    .mobile-menu {
+        display: none;
+    }
+}
