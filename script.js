@@ -5,7 +5,7 @@ const iconBurguerMenu = document.querySelector('.icon-menu')
 const mobileMenu = document.querySelector('.mobile-menu')
 
 const iconShoppingCar = document.querySelector('.navbar-shopping-cart')
-const shoppingDetail = document.querySelector('.product-detail')
+const shoppingDetail = document.querySelector('.shopping-detail')
 
 const cardsContainer = document.querySelector('.cards-container')
 
