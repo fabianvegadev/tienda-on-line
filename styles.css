@@ -272,7 +272,7 @@ nav {
     height: 240px;
     border-radius: 20px;
     object-fit: cover;
-    border: 2px solid var(--gray);
+    border: 2px solid var(--beige);
     cursor: pointer;
 }
 .product-info {

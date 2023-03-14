@@ -84,6 +84,56 @@ productList.push({
     price: 25000,
     image: './products/jabonFacialCarbonActivo.png'
 })
+productList.push({
+    name: 'Jabón',
+    price: 25000,
+    image: './products/jabonFacialCarbonActivo.png'
+})
+productList.push({
+    name: 'Jabón',
+    price: 25000,
+    image: './products/jabonFacialCarbonActivo.png'
+})
+productList.push({
+    name: 'Jabón',
+    price: 25000,
+    image: './products/jabonFacialCarbonActivo.png'
+})
+productList.push({
+    name: 'Jabón',
+    price: 25000,
+    image: './products/jabonFacialCarbonActivo.png'
+})
+productList.push({
+    name: 'Jabón',
+    price: 25000,
+    image: './products/jabonFacialCarbonActivo.png'
+})
+productList.push({
+    name: 'Jabón',
+    price: 25000,
+    image: './products/jabonFacialCarbonActivo.png'
+})
+productList.push({
+    name: 'Jabón',
+    price: 25000,
+    image: './products/jabonFacialCarbonActivo.png'
+})
+productList.push({
+    name: 'Jabón',
+    price: 25000,
+    image: './products/jabonFacialCarbonActivo.png'
+})
+productList.push({
+    name: 'Jabón',
+    price: 25000,
+    image: './products/jabonFacialCarbonActivo.png'
+})
+productList.push({
+    name: 'Jabón',
+    price: 25000,
+    image: './products/jabonFacialCarbonActivo.png'
+})
 
 function pagProductList(array) {
     for (product of array) {
